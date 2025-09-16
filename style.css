@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #000000, #003300);
+  color: #d4ffb2;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo-text {
+  font-size: 2.5rem;
+  color: #aaff00;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #55ff55;
+}
+
+.main {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.stream-frame {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+  border: 4px solid #aaff00;
+  border-radius: 12px;
+  background: #000;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(170, 255, 0, 0.3);
+}
+
+.stream-placeholder {
+  text-align: center;
+  color: #aaff00;
+}
+
+.play-icon {
+  font-size: 4rem;
+  opacity: 0.8;
+}
+
+.stream-text {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.countdown #timer {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #ffea00;
+}
+
+.rules, .description, .challenge, .highrisk {
+  margin: 30px 0;
+  text-align: left;
+}
+
+.rules h2, .challenge h2, .highrisk h2, .countdown h2 {
+  color: #ffea00;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+#falling {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  user-select: none;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0.7; }
+}
